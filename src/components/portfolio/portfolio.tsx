@@ -12,7 +12,10 @@ interface IPortfolio{
 
 async function getData() {
     const query = `*[_type == 'portfolio']`
-    const data = await client.fetch(query);
+    const data = await client.fetch(`${query}`,
+    {
+      next: {revalidate: 0}
+    });
     return data as IPortfolio[];
 }
 
