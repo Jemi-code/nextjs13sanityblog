@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 import { client } from '@/utils/configSanity';
 import { PortableText } from '@portabletext/react';
 
-export const revalidate = 0;
+export const revalidate = 10;
 
 interface IPortfolio{
     _id: string;
